@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Tutor Login</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script src="firebase.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>AI Tutor Login</h1>
+
+  <div id="auth-section">
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <p id="auth-msg"></p>
+  </div>
+
+  <div id="main-section" style="display:none;">
+    <h2>Welcome, <span id="user-name"></span></h2>
+    <p>Select subject & grade:</p>
+    <select id="subject">
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+    </select>
+
+    <select id="grade">
+      <option value="grade1">Grade 1</option>
+      <option value="grade2">Grade 2</option>
+    </select>
+
+    <button onclick="startLesson()">Start Learning</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
